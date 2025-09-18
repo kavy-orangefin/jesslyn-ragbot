@@ -111,15 +111,15 @@ const DashboardPage: React.FC = () => {
     try {
       setLoading(true)
       const [subsectionsRes, contentItemsRes] = await Promise.all([
-        fetch('http://localhost:1337/api/subsections'),
-        fetch('http://localhost:1337/api/content-items?populate[content][on][content.step-guide][populate][stepNumber][populate]=*&populate[content][on][content.text-block]=*&populate[content][on][content.additional-information][populate]=*&populate[content][on][content.table]=*&pagination[pageSize]=200')
+        fetch('http://18.223.214.216:1337/api/subsections'),
+        fetch('http://18.223.214.216:1337/api/content-items?populate[content][on][content.step-guide][populate][stepNumber][populate]=*&populate[content][on][content.text-block]=*&populate[content][on][content.additional-information][populate]=*&populate[content][on][content.table]=*&pagination[pageSize]=200')
       ])
 
     // try {
     //   setLoading(true)
     //   const [subsectionsRes, contentItemsRes] = await Promise.all([
-    //     fetch('http://localhost:1337/api/subsections?filters[information_status][$eq]=temporary'),
-    //     fetch('http://localhost:1337/api/content-items?filters[parentSubsection][information_status][$eq]=temporary&populate[content][on][content.step-guide][populate][stepNumber][populate]=*&populate[content][on][content.text-block]=*&populate[content][on][content.table]=*')
+    //     fetch('http://18.223.214.216:1337/api/subsections?filters[information_status][$eq]=temporary'),
+    //     fetch('http://18.223.214.216:1337/api/content-items?filters[parentSubsection][information_status][$eq]=temporary&populate[content][on][content.step-guide][populate][stepNumber][populate]=*&populate[content][on][content.text-block]=*&populate[content][on][content.table]=*')
     //   ])
 
       if (!subsectionsRes.ok || !contentItemsRes.ok) {
@@ -746,7 +746,7 @@ const DashboardPage: React.FC = () => {
                                             {contentBlock.stepNumber.stepImage && (
                                               <div className="mt-4">
                                                 <img 
-                                                  src={`http://localhost:1337${contentBlock.stepNumber.stepImage.url}`}
+                                                  src={`http://18.223.214.216:1337${contentBlock.stepNumber.stepImage.url}`}
                                                   alt={contentBlock.stepNumber.stepImage.name || 'Step image'}
                                                   className="max-w-full h-auto rounded border shadow-md"
                                                 />
@@ -788,7 +788,7 @@ const DashboardPage: React.FC = () => {
                                     {contentBlock.media && (
                                       <div className="mt-4">
                                         <img 
-                                          src={`http://localhost:1337${contentBlock.media.url}`}
+                                          src={`http://18.223.214.216:1337${contentBlock.media.url}`}
                                           alt={contentBlock.media.alternativeText || contentBlock.media.name || 'Additional information image'}
                                           className="max-w-full h-auto rounded border shadow-md"
                                         />
@@ -882,7 +882,7 @@ const DashboardPage: React.FC = () => {
                                               {contentBlock.stepNumber.stepImage && (
                                                 <div className="mt-4">
                                                   <img 
-                                                    src={`http://localhost:1337${contentBlock.stepNumber.stepImage.url}`}
+                                                    src={`http://18.223.214.216:1337${contentBlock.stepNumber.stepImage.url}`}
                                                     alt={contentBlock.stepNumber.stepImage.name || 'Step image'}
                                                     className="max-w-full h-auto rounded border shadow-md"
                                                   />
@@ -924,7 +924,7 @@ const DashboardPage: React.FC = () => {
                                       {contentBlock.media && (
                                         <div className="mt-4">
                                           <img 
-                                            src={`http://localhost:1337${contentBlock.media.url}`}
+                                            src={`http://18.223.214.216:1337${contentBlock.media.url}`}
                                             alt={contentBlock.media.alternativeText || contentBlock.media.name || 'Additional information image'}
                                             className="max-w-full h-auto rounded border shadow-md"
                                           />
@@ -1008,7 +1008,7 @@ const DashboardPage: React.FC = () => {
                                               {contentBlock.stepNumber.stepImage && (
                                                 <div className="mt-4">
                                                   <img 
-                                                    src={`http://localhost:1337${contentBlock.stepNumber.stepImage.url}`}
+                                                    src={`http://18.223.214.216:1337${contentBlock.stepNumber.stepImage.url}`}
                                                     alt={contentBlock.stepNumber.stepImage.name || 'Step image'}
                                                     className="max-w-full h-auto rounded border shadow-md"
                                                   />
@@ -1050,7 +1050,7 @@ const DashboardPage: React.FC = () => {
                                       {contentBlock.media && (
                                         <div className="mt-4">
                                           <img 
-                                            src={`http://localhost:1337${contentBlock.media.url}`}
+                                            src={`http://18.223.214.216:1337${contentBlock.media.url}`}
                                             alt={contentBlock.media.alternativeText || contentBlock.media.name || 'Additional information image'}
                                             className="max-w-full h-auto rounded border shadow-md"
                                           />
