@@ -1,0 +1,295 @@
+# =============================================================================
+# COMPREHENSIVE .GITIGNORE FOR JESSLYN-RAGBOT PROJECT
+# =============================================================================
+# This file covers Python backend, Node.js/React frontend, Jupyter notebooks,
+# databases, and general development files that should never be committed.
+
+# =============================================================================
+# ENVIRONMENT AND SECRETS
+# =============================================================================
+# Environment files containing secrets, API keys, and sensitive configuration
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.backup
+*.env
+config.json
+secrets.json
+
+# =============================================================================
+# PYTHON BACKEND
+# =============================================================================
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.env/
+.python-version
+
+# Python package files
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller files
+*.manifest
+*.spec
+
+# Python testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# =============================================================================
+# NODE.JS FRONTEND AND JAVASCRIPT
+# =============================================================================
+# Node.js dependencies (CRITICAL - these can be huge)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Package manager files (keep package.json and package-lock.json)
+.npm
+.yarn-integrity
+.pnp.*
+
+# Build outputs and compiled assets
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+
+# TypeScript compiled files
+*.tsbuildinfo
+
+# Webpack and bundler outputs
+bundle.js
+bundle.min.js
+*.chunk.js
+*.chunk.css
+
+# =============================================================================
+# STRAPI CMS SPECIFIC
+# =============================================================================
+# Strapi build files and generated content
+.strapi/
+.strapi-updater.json
+exports/
+public/uploads/
+
+# Strapi database files (if using SQLite locally)
+*.db
+*.sqlite
+*.sqlite3
+
+# =============================================================================
+# DATABASES AND VECTOR STORES
+# =============================================================================
+# ChromaDB directories (vector database storage)
+chroma_*/
+chroma_db/
+chroma_db2/
+chroma_db_*/
+chroma_ms365/
+chroma_ms365_2/
+chroma_full/
+action_library_db/
+
+# SQLite databases
+*.sqlite
+*.sqlite3
+*.db
+
+# Database dumps and backups
+*.sql
+*.dump
+*.backup
+
+# =============================================================================
+# JUPYTER NOTEBOOKS
+# =============================================================================
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Jupyter notebook outputs (uncomment if you want to exclude outputs)
+# *.ipynb
+
+# =============================================================================
+# IDE AND EDITOR FILES
+# =============================================================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (PyCharm, WebStorm, IntelliJ, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim and Emacs
+*.swp
+*.swo
+*~
+.netrwhist
+*~
+
+# =============================================================================
+# OPERATING SYSTEM FILES
+# =============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# =============================================================================
+# LOGS AND TEMPORARY FILES
+# =============================================================================
+# Log files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+import_*.log
+export_*.log
+
+# Runtime data and process IDs
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary directories
+tmp/
+temp/
+.tmp/
+.cache/
+
+# =============================================================================
+# TESTING AND COVERAGE
+# =============================================================================
+# Jest coverage
+coverage/
+.nyc_output/
+
+# Test results
+test-results/
+*.lcov
+
+# =============================================================================
+# DEPLOYMENT AND CI/CD
+# =============================================================================
+# Deployment files
+.vercel
+.netlify/
+
+# Docker
+Dockerfile.prod
+docker-compose.override.yml
+
+# =============================================================================
+# DOCUMENTATION AND README ARTIFACTS
+# =============================================================================
+# Documentation build files
+docs/_build/
+site/
+
+# =============================================================================
+# MISCELLANEOUS
+# =============================================================================
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Compressed files (unless specifically needed)
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Security and certificates (unless specifically needed)
+*.pem
+*.key
+*.crt
+*.cert
+
+# Large media files (uncomment if you want to exclude them)
+# *.mp4
+# *.avi
+# *.mov
+# *.wmv
+# *.flv
+# *.mp3
+# *.wav
+
+# =============================================================================
+# PROJECT-SPECIFIC EXCLUSIONS
+# =============================================================================
+# Task instructions and personal notes (if they contain sensitive info)
+# task_instructions.md
+
+# Action library files (if they contain proprietary information)
+# action-library-knowledge-base*.md
+
+# Test files that might contain API keys or sensitive data
+# test_*.py (if they contain real API keys)
