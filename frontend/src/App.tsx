@@ -4,7 +4,6 @@ import { AuthProvider, useAuth } from '@/contexts/AuthContext'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import LoginPage from '@/pages/LoginPage'
 import DashboardPage from '@/pages/DashboardPage'
-import HomePage from '@/pages/HomePage'
 import DocumentationPage from '@/pages/DocumentationPage'
 import './index.css'
 
