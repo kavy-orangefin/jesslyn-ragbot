@@ -82,7 +82,7 @@ const DashboardPage: React.FC = () => {
   const { theme, toggleTheme } = useTheme()
   const navigate = useNavigate()
 
-  const [sections, setSections] = useState<Section[]>([])
+  // const [sections, setSections] = useState<Section[]>([])
   const [subsections, setSubsections] = useState<Subsection[]>([])
   const [contentItems, setContentItems] = useState<ContentItem[]>([])
   const [loading, setLoading] = useState(true)

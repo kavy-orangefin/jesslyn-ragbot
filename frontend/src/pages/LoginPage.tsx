@@ -11,7 +11,7 @@ const LoginPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null)
   
   const { signIn, signUp } = useAuth()
-  const { theme, toggleTheme } = useTheme()
+  const { theme } = useTheme()
   const navigate = useNavigate()
 
   const handleSubmit = async (e: React.FormEvent) => {

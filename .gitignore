@@ -149,7 +149,7 @@ action_library_db/
 .ipynb_checkpoints/
 
 # Jupyter notebook outputs (uncomment if you want to exclude outputs)
-# *.ipynb
+*.ipynb
 
 # =============================================================================
 # IDE AND EDITOR FILES
