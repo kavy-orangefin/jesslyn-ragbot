@@ -4,7 +4,7 @@ import { useTheme } from '@/contexts/ThemeContext'
 import { useNavigate } from 'react-router-dom'
 
 const LoginPage: React.FC = () => {
-  const [isLogin, setIsLogin] = useState(true)
+  const [isLogin] = useState(true)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)

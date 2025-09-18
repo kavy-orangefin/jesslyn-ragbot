@@ -63,7 +63,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     const animateParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-      particles.forEach((particle, index) => {
+      particles.forEach((particle) => {
         // Update position
         particle.x += particle.vx
         particle.y += particle.vy

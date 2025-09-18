@@ -5,14 +5,14 @@ import { useNavigate } from 'react-router-dom'
 import ChatBot from '@/components/ChatBot'
 import HeroSection from '@/components/HeroSection'
 
-interface Section {
-  id: number
-  attributes: {
-    title: string
-    sectionNumber: string
-    description: string
-  }
-}
+// interface Section {
+//   id: number
+//   attributes: {
+//     title: string
+//     sectionNumber: string
+//     description: string
+//   }
+// }
 
 interface Subsection {
   id: number
@@ -219,28 +219,28 @@ const DashboardPage: React.FC = () => {
   }
 
   // Helper function to find which subsection contains a content item
-  const findSubsectionContainingContent = (contentItem: ContentItem) => {
-    console.log('Looking for parent of:', contentItem.setionID);
-    console.log('Available subsections:');
-    subsections.forEach(sub => {
-      console.log(`- ${sub.title}: ${sub.sectionId.trim()}`);
-    });
-    
-    // Fix the matching logic - '6.1' should match parent '6.0'
-    return subsections.find(sub => {
-      const parentId = sub.sectionId.trim();
-      const contentId = contentItem.setionID;
-      
-      // Check if content ID starts with parent ID (6.1 starts with 6.0 won't work)
-      // Instead check if they share the same major version number
-      const contentMajor = contentId.split('.')[0]; // '6' from '6.1'
-      const parentMajor = parentId.split('.')[0];   // '6' from '6.0'
-      
-      const matches = contentMajor === parentMajor;
-      console.log(`${parentId} matches ${contentId}:`, matches);
-      return matches;
-    });
-  };
+  // const findSubsectionContainingContent = (contentItem: ContentItem) => {
+  //   console.log('Looking for parent of:', contentItem.setionID);
+  //   console.log('Available subsections:');
+  //   subsections.forEach(sub => {
+  //     console.log(`- ${sub.title}: ${sub.sectionId.trim()}`);
+  //   });
+  //   
+  //   // Fix the matching logic - '6.1' should match parent '6.0'
+  //   return subsections.find(sub => {
+  //     const parentId = sub.sectionId.trim();
+  //     const contentId = contentItem.setionID;
+  //     
+  //     // Check if content ID starts with parent ID (6.1 starts with 6.0 won't work)
+  //     // Instead check if they share the same major version number
+  //     const contentMajor = contentId.split('.')[0]; // '6' from '6.1'
+  //     const parentMajor = parentId.split('.')[0];   // '6' from '6.0'
+  //     
+  //     const matches = contentMajor === parentMajor;
+  //     console.log(`${parentId} matches ${contentId}:`, matches);
+  //     return matches;
+  //   });
+  // };
 
   // Helper function to find the processed subsection with content items
   const findProcessedSubsectionContainingContent = (contentItem: ContentItem) => {
@@ -403,7 +403,7 @@ const DashboardPage: React.FC = () => {
     if (lines.length < 3) return null; // Need at least header, separator, and one data row
     
     const headers = lines[0].split('|').filter(cell => cell.trim()).map(cell => cell.trim());
-    const separatorLine = lines[1];
+    // const separatorLine = lines[1];
     const dataRows = lines.slice(2).filter(line => line.trim() && line.includes('|'));
     
     return (

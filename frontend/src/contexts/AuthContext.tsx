@@ -31,7 +31,7 @@ interface AuthProviderProps {
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null)
-  const [loading, setLoading] = useState(false)
+  const [loading] = useState(false)
 
   // Simple hardcoded authentication
   const signIn = async (username: string, password: string) => {
@@ -43,7 +43,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   }
 
-  const signUp = async (username: string, password: string) => {
+  const signUp = async (_username: string, _password: string) => {
     // For now, just redirect to sign in
     return { error: 'Please use the existing credentials: username: kav1, password: 123' }
   }
