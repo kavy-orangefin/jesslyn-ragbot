@@ -28,9 +28,22 @@ const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) =
 }
 
 const AppRoutes: React.FC = () => {
+  const { user, loading } = useAuth()
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-orange-600"></div>
+      </div>
+    )
+  }
+
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route 
+        path="/" 
+        element={user ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />} 
+      />
       <Route path="/login" element={<LoginPage />} />
       <Route 
         path="/dashboard" 
