@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_content_step_guide_s",
+  "info": {
+    "displayName": "step-guide ",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "stepNumber": {
+      "type": "component",
+      "component": "content.step",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_content_tables",
+  "info": {
+    "displayName": "table",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "table": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

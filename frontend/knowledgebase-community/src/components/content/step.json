@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_content_steps",
+  "info": {
+    "displayName": "step",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "stepDescription": {
+      "type": "string"
+    },
+    "stepImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

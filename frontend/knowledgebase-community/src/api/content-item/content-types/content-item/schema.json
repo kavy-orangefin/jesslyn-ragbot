@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_items",
+  "info": {
+    "singularName": "content-item",
+    "pluralName": "content-items",
+    "displayName": "ContentItem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "setionID": {
+      "type": "string",
+      "required": true
+    },
+    "parentSubsection": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subsection.subsection"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "content.text-block",
+        "content.step-guide",
+        "content.additional-information",
+        "content.table"
+      ],
+      "required": true
+    }
+  }
+}
