@@ -4,6 +4,9 @@ import { useTheme } from '@/contexts/ThemeContext'
 import { useNavigate } from 'react-router-dom'
 import ChatBot from '@/components/ChatBot'
 import HeroSection from '@/components/HeroSection'
+import bLeafSvg from '@/assets/b_leaf.svg'
+import vSvg from '@/assets/v.svg'
+import artboardPng from '@/assets/Artboard-4-1.png'
 
 // interface Section {
 //   id: number
@@ -606,19 +609,19 @@ const DashboardPage: React.FC = () => {
         
         {/* Media assets positioned relative to hero section */}
         <img 
-          src="/src/assets/b_leaf.svg" 
+          src={bLeafSvg} 
           alt="File illustration" 
           className="absolute bottom-4 left-4 w-16 h-16 opacity-80 z-20"
         />
         <img 
-          src="/src/assets/v.svg" 
+          src={vSvg} 
           alt="File illustration" 
           className="absolute bottom-4 right-4 w-20 h-20 opacity-80 z-20"
         />
 
 
         <img 
-          src="/src/assets/Artboard-4-1.png" 
+          src={artboardPng} 
           alt="" 
           className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2"
         />

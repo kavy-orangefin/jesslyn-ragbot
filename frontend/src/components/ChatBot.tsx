@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTheme } from '@/contexts/ThemeContext'
 import ClickableSection from './ClickableSection'
+import oBPng from '@/assets/oB.png'
 
 interface ReferencedSection {
   id: string;
@@ -257,7 +258,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '', onSectionClick }) => 
                 {/* Profile Picture */}
                 <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center overflow-hidden border border-gray-200">
                   <img 
-                    src="/images/oB.png" 
+                    src={oBPng} 
                     alt="Jesslyn Bot Icon" 
                     className="w-6 h-6 object-cover"
                   />
@@ -300,7 +301,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '', onSectionClick }) => 
                       </svg>
                     ) : (
                       <img 
-                        src="/images/oB.png" 
+                        src={oBPng} 
                         alt="Jesslyn Bot Icon" 
                         className="w-6 h-6 object-cover"
                       />
@@ -319,7 +320,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '', onSectionClick }) => 
                     theme === 'dark' ? 'bg-gray-700 border border-gray-600' : 'bg-white border border-gray-200'
                   }`}>
                     <img 
-                      src="/images/oB.png" 
+                      src={oBPng} 
                       alt="Jesslyn Bot Icon" 
                       className="w-6 h-6 object-cover"
                     />

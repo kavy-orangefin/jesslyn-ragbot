@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useTheme } from '@/contexts/ThemeContext'
 import { useNavigate } from 'react-router-dom'
+import orangeLogoPng from '@/assets/orange-removebg-preview.png'
 
 const LoginPage: React.FC = () => {
   const [isLogin] = useState(true)
@@ -57,7 +58,7 @@ const LoginPage: React.FC = () => {
             {/* Logo */}
             <div className="flex items-center justify-center mb-4">
               <img 
-                src="/images/orange-removebg-preview.png" 
+                src={orangeLogoPng} 
                 alt="Orange Knowledge Base Logo" 
                 className="w-12 h-12 mr-3 object-contain drop-shadow-md"
               />
