@@ -2,9 +2,11 @@ Flask
 Flask-CORS
 python-dotenv
 langchain
-langchain-openai
+langchain-google-genai
 langchain-community
 chromadb
-openai
+google-generativeai
 requests
-gunicorn 
+gunicorn
+waitress
+openai 

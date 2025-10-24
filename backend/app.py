@@ -17,7 +17,17 @@ logger = logging.getLogger(__name__)
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)
+
+# Configure CORS with environment variable support
+allowed_origins = os.getenv('ALLOWED_ORIGINS', '*')
+if allowed_origins != '*':
+    # Split comma-separated origins
+    origins_list = [origin.strip() for origin in allowed_origins.split(',')]
+    CORS(app, origins=origins_list, supports_credentials=True)
+    logger.info(f"CORS configured with origins: {origins_list}")
+else:
+    CORS(app)
+    logger.warning("CORS configured to allow all origins (development mode)")
 
 # Global variables
 chat_handler = None
