@@ -18,6 +18,10 @@
 config.json
 secrets.json
 
+# BUT keep .env.example files (they're templates without secrets)
+!.env.example
+!**/.env.example
+
 # =============================================================================
 # PYTHON BACKEND
 # =============================================================================

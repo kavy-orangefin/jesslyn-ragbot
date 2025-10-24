@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useTheme } from '@/contexts/ThemeContext'
 import ClickableSection from './ClickableSection'
 import oBPng from '@/assets/oB.png'
+import { API_ENDPOINTS } from '@/config/api'
 
 interface ReferencedSection {
   id: string;
@@ -102,7 +103,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '', onSectionClick }) => 
     setIsLoading(true)
 
     try {
-      const response = await fetch('http://localhost:5000/api/chat', {
+      const response = await fetch(API_ENDPOINTS.chat, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -7,6 +7,7 @@ import HeroSection from '@/components/HeroSection'
 import bLeafSvg from '@/assets/b_leaf.svg'
 import vSvg from '@/assets/v.svg'
 import artboardPng from '@/assets/Artboard-4-1.png'
+import { API_ENDPOINTS } from '@/config/api'
 
 // interface Section {
 //   id: number
@@ -114,8 +115,8 @@ const DashboardPage: React.FC = () => {
     try {
       setLoading(true)
       const [subsectionsRes, contentItemsRes] = await Promise.all([
-        fetch('http://18.223.214.216:1337/api/subsections'),
-        fetch('http://18.223.214.216:1337/api/content-items?populate[content][on][content.step-guide][populate][stepNumber][populate]=*&populate[content][on][content.text-block]=*&populate[content][on][content.additional-information][populate]=*&populate[content][on][content.table]=*&pagination[pageSize]=200')
+        fetch(API_ENDPOINTS.subsections),
+        fetch(`${API_ENDPOINTS.contentItems}?populate[content][on][content.step-guide][populate][stepNumber][populate]=*&populate[content][on][content.text-block]=*&populate[content][on][content.additional-information][populate]=*&populate[content][on][content.table]=*&pagination[pageSize]=200`)
       ])
 
     // try {
@@ -749,7 +750,7 @@ const DashboardPage: React.FC = () => {
                                             {contentBlock.stepNumber.stepImage && (
                                               <div className="mt-4">
                                                 <img 
-                                                  src={`http://18.223.214.216:1337${contentBlock.stepNumber.stepImage.url}`}
+                                                  src={API_ENDPOINTS.getStrapiAssetUrl(contentBlock.stepNumber.stepImage.url)}
                                                   alt={contentBlock.stepNumber.stepImage.name || 'Step image'}
                                                   className="max-w-full h-auto rounded border shadow-md"
                                                 />
@@ -791,7 +792,7 @@ const DashboardPage: React.FC = () => {
                                     {contentBlock.media && (
                                       <div className="mt-4">
                                         <img 
-                                          src={`http://18.223.214.216:1337${contentBlock.media.url}`}
+                                          src={API_ENDPOINTS.getStrapiAssetUrl(contentBlock.media.url)}
                                           alt={contentBlock.media.alternativeText || contentBlock.media.name || 'Additional information image'}
                                           className="max-w-full h-auto rounded border shadow-md"
                                         />
@@ -885,7 +886,7 @@ const DashboardPage: React.FC = () => {
                                               {contentBlock.stepNumber.stepImage && (
                                                 <div className="mt-4">
                                                   <img 
-                                                    src={`http://18.223.214.216:1337${contentBlock.stepNumber.stepImage.url}`}
+                                                    src={API_ENDPOINTS.getStrapiAssetUrl(contentBlock.stepNumber.stepImage.url)}
                                                     alt={contentBlock.stepNumber.stepImage.name || 'Step image'}
                                                     className="max-w-full h-auto rounded border shadow-md"
                                                   />
@@ -927,7 +928,7 @@ const DashboardPage: React.FC = () => {
                                       {contentBlock.media && (
                                         <div className="mt-4">
                                           <img 
-                                            src={`http://18.223.214.216:1337${contentBlock.media.url}`}
+                                            src={API_ENDPOINTS.getStrapiAssetUrl(contentBlock.media.url)}
                                             alt={contentBlock.media.alternativeText || contentBlock.media.name || 'Additional information image'}
                                             className="max-w-full h-auto rounded border shadow-md"
                                           />
@@ -1011,7 +1012,7 @@ const DashboardPage: React.FC = () => {
                                               {contentBlock.stepNumber.stepImage && (
                                                 <div className="mt-4">
                                                   <img 
-                                                    src={`http://18.223.214.216:1337${contentBlock.stepNumber.stepImage.url}`}
+                                                    src={API_ENDPOINTS.getStrapiAssetUrl(contentBlock.stepNumber.stepImage.url)}
                                                     alt={contentBlock.stepNumber.stepImage.name || 'Step image'}
                                                     className="max-w-full h-auto rounded border shadow-md"
                                                   />
@@ -1053,7 +1054,7 @@ const DashboardPage: React.FC = () => {
                                       {contentBlock.media && (
                                         <div className="mt-4">
                                           <img 
-                                            src={`http://18.223.214.216:1337${contentBlock.media.url}`}
+                                            src={API_ENDPOINTS.getStrapiAssetUrl(contentBlock.media.url)}
                                             alt={contentBlock.media.alternativeText || contentBlock.media.name || 'Additional information image'}
                                             className="max-w-full h-auto rounded border shadow-md"
                                           />
