@@ -57,6 +57,6 @@ if errorlevel 1 (
 
 REM Start with waitress (Windows-friendly WSGI server)
 echo ✅ Starting server with waitress...
-waitress-serve --host=0.0.0.0 --port=5000 --threads=8 app:app
+waitress-serve --host=0.0.0.0 --port=5001 --threads=8 app:app
 
 pause
