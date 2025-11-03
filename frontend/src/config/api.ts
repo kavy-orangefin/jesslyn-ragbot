@@ -4,10 +4,10 @@
  */
 
 // Backend API base URL
-export const BACKEND_API_URL = import.meta.env.VITE_BACKEND_API_URL || 'http://localhost:5000'
+export const BACKEND_API_URL = import.meta.env.VITE_BACKEND_API_URL || ''
 
 // Strapi CMS base URL
-export const STRAPI_API_URL = import.meta.env.VITE_STRAPI_API_URL || 'http://18.223.214.216:1337'
+export const STRAPI_API_URL = import.meta.env.VITE_STRAPI_API_URL || 'http://13.212.36.232:1337'
 
 // API Endpoints
 export const API_ENDPOINTS = {
