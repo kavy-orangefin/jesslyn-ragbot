@@ -350,26 +350,10 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '', onSectionClick }) => 
             {/* Message Input Area */}
             <div className={`p-4 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
               <form onSubmit={handleSubmit} className={`flex items-center space-x-3 rounded-full border shadow-sm px-4 py-2 ${
-                theme === 'dark' 
-                  ? 'bg-gray-700 border-gray-600' 
+                theme === 'dark'
+                  ? 'bg-gray-700 border-gray-600'
                   : 'bg-white border-gray-200'
               }`}>
-                {/* Attachment Button */}
-                <button
-                  type="button"
-                  className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200 ${
-                    theme === 'dark' 
-                      ? 'bg-gray-600 hover:bg-gray-500' 
-                      : 'bg-gray-100 hover:bg-gray-200'
-                  }`}
-                >
-                  <svg className={`w-4 h-4 ${
-                    theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
-                  }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                  </svg>
-                </button>
-                
                 {/* Text Input */}
                 <input
                   type="text"
@@ -377,12 +361,12 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '', onSectionClick }) => 
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Write a message..."
                   className={`flex-1 px-2 py-2 bg-transparent border-none outline-none ${
-                    theme === 'dark' 
-                      ? 'text-gray-200 placeholder-gray-400' 
+                    theme === 'dark'
+                      ? 'text-gray-200 placeholder-gray-400'
                       : 'text-gray-700 placeholder-gray-500'
                   }`}
                 />
-                
+
                 {/* Send Button */}
                 <button
                   type="submit"

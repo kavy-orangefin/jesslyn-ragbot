@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useTheme } from '@/contexts/ThemeContext'
-import { useNavigate } from 'react-router-dom'
 import ChatBot from '@/components/ChatBot'
 import HeroSection from '@/components/HeroSection'
 import bLeafSvg from '@/assets/b_leaf.svg'
@@ -82,9 +81,8 @@ interface ContentItem {
 }
 
 const DashboardPage: React.FC = () => {
-  const { user, signOut } = useAuth()
+  const { user } = useAuth()
   const { theme, toggleTheme } = useTheme()
-  const navigate = useNavigate()
 
   // const [sections, setSections] = useState<Section[]>([])
   const [subsections, setSubsections] = useState<Subsection[]>([])
@@ -145,11 +143,6 @@ const DashboardPage: React.FC = () => {
     } finally {
       setLoading(false)
     }
-  }
-
-  const handleSignOut = async () => {
-    await signOut()
-    navigate('/login', { replace: true })
   }
 
   const toggleSubsection = (subsectionId: number) => {
@@ -654,12 +647,6 @@ const DashboardPage: React.FC = () => {
                 className="p-2 rounded-lg bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors duration-200"
               >
                 {theme === 'light' ? '🌙' : '☀️'}
-              </button>
-              <button
-                onClick={handleSignOut}
-                className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 backdrop-blur-sm border border-white/30"
-              >
-                Sign Out
               </button>
             </div>
           </div>
